@@ -19,7 +19,7 @@ def deleteNode(update, context):
         msg = sendMessage(f"<b>Deleting:</b> <code>{link}</code>", context.bot, update)
         LOGGER.info(f"Deleting: {link}")
         gd = GoogleDriveHelper()
-        result = gd.deletefile(link)
+        result = gd.deleteFile(link)
         deleteMessage(context.bot, msg)
         sendMessage(result, context.bot, update)
     else:
